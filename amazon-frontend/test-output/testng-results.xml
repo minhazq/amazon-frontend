@@ -2,44 +2,46 @@
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="33919" started-at="2016-07-26T00:54:30Z" finished-at="2016-07-26T00:55:04Z">
+  <suite name="Functional Test Suite" duration-ms="29540" started-at="2016-07-26T01:12:46Z" finished-at="2016-07-26T01:13:16Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="33919" started-at="2016-07-26T00:54:30Z" finished-at="2016-07-26T00:55:04Z">
+    <test name="Valid Login" duration-ms="29509" started-at="2016-07-26T01:12:46Z" finished-at="2016-07-26T01:13:16Z">
       <class name="mq.amazon_frontend.login.FR001_ValidLogin">
-        <test-method status="PASS" signature="setup()[pri:0, instance:mq.amazon_frontend.login.FR001_ValidLogin@2c8d66b2]" name="setup" is-config="true" duration-ms="10" started-at="2016-07-25T20:54:30Z" finished-at="2016-07-25T20:54:30Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:mq.amazon_frontend.login.FR001_ValidLogin@2c8d66b2]" name="setup" is-config="true" duration-ms="11" started-at="2016-07-25T21:12:46Z" finished-at="2016-07-25T21:12:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:mq.amazon_frontend.login.FR001_ValidLogin@2c8d66b2]" name="beforeMethod" is-config="true" duration-ms="11226" started-at="2016-07-25T20:54:30Z" finished-at="2016-07-25T20:54:41Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:mq.amazon_frontend.login.FR001_ValidLogin@2c8d66b2]" name="beforeMethod" is-config="true" duration-ms="12861" started-at="2016-07-25T21:12:46Z" finished-at="2016-07-25T21:12:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="validLoginTest()[pri:0, instance:mq.amazon_frontend.login.FR001_ValidLogin@2c8d66b2]" name="validLoginTest" duration-ms="9528" started-at="2016-07-25T20:54:41Z" finished-at="2016-07-25T20:54:50Z">
+        <test-method status="PASS" signature="validLoginTest()[pri:0, instance:mq.amazon_frontend.login.FR001_ValidLogin@2c8d66b2]" name="validLoginTest" duration-ms="2550" started-at="2016-07-25T21:12:59Z" finished-at="2016-07-25T21:13:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validLoginTest -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:mq.amazon_frontend.login.FR001_ValidLogin@2c8d66b2]" name="afterMethod" is-config="true" duration-ms="136" started-at="2016-07-25T20:54:50Z" finished-at="2016-07-25T20:54:51Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:mq.amazon_frontend.login.FR001_ValidLogin@2c8d66b2]" name="afterMethod" is-config="true" duration-ms="136" started-at="2016-07-25T21:13:02Z" finished-at="2016-07-25T21:13:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:mq.amazon_frontend.login.FR001_ValidLogin@2c8d66b2]" name="beforeMethod" is-config="true" duration-ms="10464" started-at="2016-07-25T20:54:51Z" finished-at="2016-07-25T20:55:01Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:mq.amazon_frontend.login.FR001_ValidLogin@2c8d66b2]" name="beforeMethod" is-config="true" duration-ms="11471" started-at="2016-07-25T21:13:02Z" finished-at="2016-07-25T21:13:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="validLoginTest2()[pri:0, instance:mq.amazon_frontend.login.FR001_ValidLogin@2c8d66b2]" name="validLoginTest2" duration-ms="2405" started-at="2016-07-25T20:55:01Z" finished-at="2016-07-25T20:55:03Z">
+        <test-method status="PASS" signature="validLoginTest2()[pri:0, instance:mq.amazon_frontend.login.FR001_ValidLogin@2c8d66b2]" name="validLoginTest2" duration-ms="2319" started-at="2016-07-25T21:13:13Z" finished-at="2016-07-25T21:13:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validLoginTest2 -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:mq.amazon_frontend.login.FR001_ValidLogin@2c8d66b2]" name="afterMethod" is-config="true" duration-ms="134" started-at="2016-07-25T20:55:03Z" finished-at="2016-07-25T20:55:04Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:mq.amazon_frontend.login.FR001_ValidLogin@2c8d66b2]" name="afterMethod" is-config="true" duration-ms="140" started-at="2016-07-25T21:13:16Z" finished-at="2016-07-25T21:13:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:mq.amazon_frontend.login.FR001_ValidLogin@2c8d66b2]" name="tearDown" is-config="true" duration-ms="2" started-at="2016-07-25T20:55:04Z" finished-at="2016-07-25T20:55:04Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:mq.amazon_frontend.login.FR001_ValidLogin@2c8d66b2]" name="tearDown" is-config="true" duration-ms="0" started-at="2016-07-25T21:13:16Z" finished-at="2016-07-25T21:13:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- mq.amazon_frontend.login.FR001_ValidLogin -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Valid Login -->
+    <test name="Regression1" duration-ms="1" started-at="2016-07-26T01:13:16Z" finished-at="2016-07-26T01:13:16Z">
+    </test> <!-- Regression1 -->
+  </suite> <!-- Functional Test Suite -->
 </testng-results>
