@@ -1,22 +1,22 @@
 package mq.amazon_frontend.framework.controller;
 
+import org.openqa.selenium.WebDriver;
+
 import mq.amazon_frontend.framework.model.HomePageModel;
-import mq.amazon_frontend.framework.model.PageModelBase;
-import mq.amazon_frontend.framework.model.SignInPageModel;
 
 public class HomePageController extends ControllerBase{
 
-	private SignInPageModel siginInPageModel ; 
+	private HomePageModel homePageModel;
 	
-	public HomePageController(HomePageModel pmb) {
-		super(pmb);
-		siginInPageModel = new SignInPageModel(wd)
+	public HomePageController(WebDriver driver) {
+		super(driver);
+		homePageModel = new HomePageModel(driver);
 	}
-
+	
 	public SignInPageController clickLogin(){
 		System.out.println("click login");
-		
-		return new SignInPageController(SignInPageModel pmb);	
+		homePageModel.loginButton.click();
+		return new SignInPageController(driver);	
 	}
 	
 	

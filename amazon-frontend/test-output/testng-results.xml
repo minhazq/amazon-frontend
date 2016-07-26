@@ -1,20 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="27" started-at="2016-07-25T19:30:54Z" finished-at="2016-07-25T19:30:54Z">
+  <suite name="Default suite" duration-ms="33919" started-at="2016-07-26T00:54:30Z" finished-at="2016-07-26T00:55:04Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="27" started-at="2016-07-25T19:30:54Z" finished-at="2016-07-25T19:30:54Z">
+    <test name="Default test" duration-ms="33919" started-at="2016-07-26T00:54:30Z" finished-at="2016-07-26T00:55:04Z">
       <class name="mq.amazon_frontend.login.FR001_ValidLogin">
-        <test-method status="PASS" signature="setup()[pri:0, instance:mq.amazon_frontend.login.FR001_ValidLogin@129a8472]" name="setup" is-config="true" duration-ms="9" started-at="2016-07-25T15:30:54Z" finished-at="2016-07-25T15:30:54Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:mq.amazon_frontend.login.FR001_ValidLogin@2c8d66b2]" name="setup" is-config="true" duration-ms="10" started-at="2016-07-25T20:54:30Z" finished-at="2016-07-25T20:54:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="validLoginTest()[pri:0, instance:mq.amazon_frontend.login.FR001_ValidLogin@129a8472]" name="validLoginTest" duration-ms="6" started-at="2016-07-25T15:30:54Z" finished-at="2016-07-25T15:30:54Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:mq.amazon_frontend.login.FR001_ValidLogin@2c8d66b2]" name="beforeMethod" is-config="true" duration-ms="11226" started-at="2016-07-25T20:54:30Z" finished-at="2016-07-25T20:54:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="validLoginTest()[pri:0, instance:mq.amazon_frontend.login.FR001_ValidLogin@2c8d66b2]" name="validLoginTest" duration-ms="9528" started-at="2016-07-25T20:54:41Z" finished-at="2016-07-25T20:54:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validLoginTest -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:mq.amazon_frontend.login.FR001_ValidLogin@2c8d66b2]" name="afterMethod" is-config="true" duration-ms="136" started-at="2016-07-25T20:54:50Z" finished-at="2016-07-25T20:54:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:mq.amazon_frontend.login.FR001_ValidLogin@2c8d66b2]" name="beforeMethod" is-config="true" duration-ms="10464" started-at="2016-07-25T20:54:51Z" finished-at="2016-07-25T20:55:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="validLoginTest2()[pri:0, instance:mq.amazon_frontend.login.FR001_ValidLogin@2c8d66b2]" name="validLoginTest2" duration-ms="2405" started-at="2016-07-25T20:55:01Z" finished-at="2016-07-25T20:55:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLoginTest2 -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:mq.amazon_frontend.login.FR001_ValidLogin@2c8d66b2]" name="afterMethod" is-config="true" duration-ms="134" started-at="2016-07-25T20:55:03Z" finished-at="2016-07-25T20:55:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:mq.amazon_frontend.login.FR001_ValidLogin@2c8d66b2]" name="tearDown" is-config="true" duration-ms="2" started-at="2016-07-25T20:55:04Z" finished-at="2016-07-25T20:55:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- mq.amazon_frontend.login.FR001_ValidLogin -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

@@ -1,13 +1,12 @@
 package mq.amazon_frontend.framework.controller;
 
-import mq.amazon_frontend.framework.model.PageModelBase;
+import org.openqa.selenium.WebDriver;
 
 public abstract class ControllerBase {
 
-	protected PageModelBase pageModel;
+	protected WebDriver driver ;
 	
-	
-	public ControllerBase( PageModelBase pmb){
-		pageModel = pmb;
+	public ControllerBase( WebDriver driver){
+		this.driver = driver;
 	}
 }

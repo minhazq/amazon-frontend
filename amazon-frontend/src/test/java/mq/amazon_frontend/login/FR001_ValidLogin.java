@@ -10,7 +10,11 @@ public class FR001_ValidLogin extends Scriptbase{
 	public void validLoginTest(){
 		
 		amazon().homePage().clickLogin().enterEmail("test");
+	}
+	
+	@Test
+	public void validLoginTest2(){
 		
-		System.out.println("Valid login is testing..");
+		amazon().homePage().clickLogin().enterEmail("minhaz");
 	}
 }
