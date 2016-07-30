@@ -8,4 +8,17 @@
   </test> <!-- Valid Login -->
   <test name="Regression1">
   </test> <!-- Regression1 -->
+  <test name="Valid Login(failed)">
+    <classes>
+      <class name="mq.amazon_frontend.login.FR001_ValidLogin">
+        <methods>
+          <include name="setup"/>
+          <include name="afterMethod"/>
+          <include name="tearDown"/>
+          <include name="validLoginTest2"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- mq.amazon_frontend.login.FR001_ValidLogin -->
+    </classes>
+  </test> <!-- Valid Login(failed) -->
 </suite> <!-- Failed suite [Functional Test Suite] -->
