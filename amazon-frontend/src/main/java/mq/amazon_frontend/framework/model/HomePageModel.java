@@ -11,7 +11,10 @@ public class HomePageModel extends PageModelBase{
 		super(wd);
 	}
 	
-	@FindBy(id="nav-link-yourAccount")
+	@FindBy(xpath="//div[@id='nav-flyout-ya-signin']/a[@data-nav-role='signin']")
 	public WebElement loginButton;
+	
+	@FindBy(id="nav-link-yourAccount")
+	public WebElement accountLink;
 
 }

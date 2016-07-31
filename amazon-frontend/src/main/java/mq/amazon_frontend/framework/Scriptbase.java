@@ -65,6 +65,7 @@ public abstract class Scriptbase {
 		setAppController(); // access point 
 		driver.manage().deleteAllCookies();
 		driver.get(appDataProperties.getProperty("url"));
+		driver.manage().window().maximize();
 		
 	}
 	

@@ -1,6 +1,9 @@
 package mq.amazon_frontend.framework.controller;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import mq.amazon_frontend.framework.model.HomePageModel;
 
@@ -14,8 +17,10 @@ public class HomePageController extends ControllerBase{
 	}
 	
 	public SignInPageController clickLogin(){
-		System.out.println("click login");
-		homePageModel.loginButton.click();
+		Actions actions = new Actions(driver);
+		actions.moveToElement(homePageModel.accountLink).perform();
+		WebDriverWait wait = new WebDriverWait(driver, 5);
+		wait.until(ExpectedConditions.elementToBeClickable(homePageModel.loginButton)).click();
 		return new SignInPageController(driver);	
 	}
 	
