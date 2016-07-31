@@ -56,6 +56,9 @@
     
     <testNG.Version>6.9.10</testNG.Version>
     <selenium-java.Version>2.53.1</selenium-java.Version>
+    <log4j-version>2.6</log4j-version>
+    <hibernate-version>5.1.0.Final</hibernate-version>
+    <mysql-connector-version>6.0.3</mysql-connector-version>
     
   </properties>
 
@@ -71,6 +74,25 @@
     	<artifactId>selenium-java</artifactId>
     	<version>${selenium-java.Version}</version>
 	</dependency>
+	
+	<dependency>
+    	<groupId>org.apache.logging.log4j</groupId>
+    	<artifactId>log4j-core</artifactId>
+    	<version>${log4j-version}</version>
+	</dependency>
+	  
+    <dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-core</artifactId>
+		<version>${hibernate-version}</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>mysql</groupId>
+		<artifactId>mysql-connector-java</artifactId>
+		<version>${mysql-connector-version}</version>
+	</dependency>
+	
 
   </dependencies>
 </project>

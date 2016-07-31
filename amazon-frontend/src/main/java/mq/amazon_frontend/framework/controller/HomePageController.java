@@ -14,6 +14,7 @@ public class HomePageController extends ControllerBase{
 	public HomePageController(WebDriver driver) {
 		super(driver);
 		homePageModel = new HomePageModel(driver);
+		logger.debug("HomePageController is created");
 	}
 	
 	public SignInPageController clickLogin(){
@@ -21,6 +22,7 @@ public class HomePageController extends ControllerBase{
 		actions.moveToElement(homePageModel.accountLink).perform();
 		WebDriverWait wait = new WebDriverWait(driver, 5);
 		wait.until(ExpectedConditions.elementToBeClickable(homePageModel.loginButton)).click();
+		logger.debug("clickLogin is performed");
 		return new SignInPageController(driver);	
 	}
 	

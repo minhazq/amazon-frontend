@@ -1,5 +1,8 @@
 package mq.amazon_frontend.framework;
 import java.util.Properties;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -17,10 +20,12 @@ public abstract class Scriptbase {
 	protected WebDriver driver;
 	protected Properties appDataProperties;
 	private ApplicationController appController;
+	protected static Logger logger ;
 	
 	
 	public Scriptbase(){
 		setAppDataProperties();
+		logger = LogManager.getLogger(this);
 	}
 
 	private void setAppDataProperties() {
@@ -102,5 +107,4 @@ public abstract class Scriptbase {
 		driver = new ChromeDriver();
 	}
 	
-
 }

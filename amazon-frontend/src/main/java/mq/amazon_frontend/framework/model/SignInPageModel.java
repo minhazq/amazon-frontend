@@ -8,6 +8,7 @@ public class SignInPageModel extends PageModelBase{
 
 	public SignInPageModel(WebDriver wd) {
 		super(wd);
+		logger.debug("SignInPageModel is created");
 	}
 	
 	@FindBy(id="ap_email")

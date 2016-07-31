@@ -8,8 +8,8 @@ public class FR001_ValidLogin extends Scriptbase{
 
 	@Test
 	public void validLoginTest(){
-		
 		amazon().homePage().clickLogin().enterEmail("test");
+		logger.info(" entering Email Address");
 	}
 	
 	@Test

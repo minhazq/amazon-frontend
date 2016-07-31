@@ -1,16 +1,31 @@
 package mq.amazon_frontend.login;
 
-import java.util.Map;
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
 
-import mq.amazon_frontend.framework.util.Utils;
+import antlr.collections.List;
 
-public class Test {
+public class Test{
 
 	
-	@org.testng.annotations.Test
-	public void test01(){
+	
+	public static void main(String[] args){
 		
-		System.out.println(Utils.getOSName());
+		Configuration c = new Configuration().configure();
+		SessionFactory sf = c.buildSessionFactory();
+		Session s = sf.openSession();
+		s.beginTransaction();
+		
+		
+		
+		
+		Query query = s.createQuery("from accountprofile where id = 1");	
+
+		List result = (List) query.list();
+		
+		System.out.println(result.toString());
 		
 		
 	}
