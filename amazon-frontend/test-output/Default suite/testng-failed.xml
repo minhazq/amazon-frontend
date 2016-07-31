@@ -6,13 +6,4 @@
       <class name="mq.amazon_frontend.login.Test"/>
     </classes>
   </test> <!-- Default test -->
-  <test name="Default test(failed)">
-    <classes>
-      <class name="mq.amazon_frontend.login.Test">
-        <methods>
-          <include name="test01"/>
-        </methods>
-      </class> <!-- mq.amazon_frontend.login.Test -->
-    </classes>
-  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

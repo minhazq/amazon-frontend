@@ -53,4 +53,11 @@ public class Utils {
 	public static String getBrowser(){
 		return System.getProperty("browser");
 	}
+
+	public static String getOSName(){
+		
+		return System.getProperty("os.name").toLowerCase();
+		
+	}
+
 }
