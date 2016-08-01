@@ -17,6 +17,7 @@ public class FR001_ValidLogin extends Scriptbase{
 		
 		logger.info("Entering User Name = "+userName + " and password = "+password + " is complete");
 		
+		
 	}
 	
 	@Test
