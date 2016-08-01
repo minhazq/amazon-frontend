@@ -20,6 +20,7 @@ public abstract class PageModelBase {
 		waitForPageLoad(wd);
 	}
 	
+	//Using GUAVA Library. Used to check of the page is loaded or not
 	static void waitForPageLoad(WebDriver wdriver) {
 	    WebDriverWait wait = new WebDriverWait(wdriver, 60);
 	    Predicate<WebDriver> pageLoaded = new Predicate<WebDriver>() {
@@ -27,7 +28,8 @@ public abstract class PageModelBase {
 	        @Override
 	        public boolean apply(WebDriver input) {
 	            logger.info("Waiting for the page to be loaded...");
-	        	return ((JavascriptExecutor) input).executeScript("return document.readyState").equals("complete");
+	        	//Will not work for the AJAX part
+	            return ((JavascriptExecutor) input).executeScript("return document.readyState").equals("complete");
 	        }
 
 	    };
