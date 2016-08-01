@@ -3,11 +3,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class HomePageModel extends PageModelBase{
+public class LandingPageModel extends PageModelBase{
 	
-	public HomePageModel(WebDriver wd) {
+	public LandingPageModel(WebDriver wd) {
 		super(wd);
-		logger.debug("HomePageModel is created");
+		logger.debug("LandingPageModel is created");
 	}
 	
 	@FindBy(xpath="//div[@id='nav-flyout-ya-signin']/a[@data-nav-role='signin']")

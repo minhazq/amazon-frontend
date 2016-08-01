@@ -12,8 +12,8 @@ public class FR001_ValidLogin extends Scriptbase{
 		String userName = session.get(AccountProfile.class,1).getUser_name();
 		String password = session.get(AccountProfile.class,1).getUser_password();
 		
-		amazon().homePage().clickLogin().enterEmail(userName)
-		.enterPassword(password);
+		amazon().landingPage().clickLogin().enterEmail(userName).enterPassword(password).clickSignIn();
+		
 		
 		logger.info("Entering User Name = "+userName + " and password = "+password + " is complete");
 		
@@ -24,7 +24,7 @@ public class FR001_ValidLogin extends Scriptbase{
 		String userName = session.get(AccountProfile.class,1).getUser_name();
 		String password = session.get(AccountProfile.class,1).getUser_password();
 		
-		amazon().homePage().clickLogin().enterEmail(userName)
+		amazon().landingPage().clickLogin().enterEmail(userName)
 		.enterPassword(password);
 		
 		logger.info("Entering User Name = "+userName + " and password = "+password + " is complete");
