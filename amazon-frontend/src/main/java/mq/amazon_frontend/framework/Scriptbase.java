@@ -3,6 +3,9 @@ import java.util.Properties;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -21,6 +24,8 @@ public abstract class Scriptbase {
 	protected Properties appDataProperties;
 	private ApplicationController appController;
 	protected static Logger logger ;
+	protected Session session ;
+	SessionFactory sessionFactory ;
 	
 	
 	public Scriptbase(){
@@ -68,6 +73,7 @@ public abstract class Scriptbase {
 	public void beforeMethod(){
 		setDriver();
 		setAppController(); // access point 
+		loadHibernateSession();
 		driver.manage().deleteAllCookies();
 		driver.get(appDataProperties.getProperty("url"));
 		driver.manage().window().maximize();
@@ -76,10 +82,8 @@ public abstract class Scriptbase {
 	
 	@AfterMethod
 	public void afterMethod(){
-		if(driver!=null){
-			driver.close();
-			driver = null;
-		}
+		closeDriver();
+		dropHibernateSession();
 	}
 	
 	@AfterTest
@@ -107,4 +111,27 @@ public abstract class Scriptbase {
 		driver = new ChromeDriver();
 	}
 	
+	private void loadHibernateSession(){
+		
+		Configuration configuration = new Configuration().configure();
+		sessionFactory = configuration.buildSessionFactory();
+		session = sessionFactory.openSession();
+		session.beginTransaction();
+	}
+	
+	private void dropHibernateSession(){
+		if(session!=null){
+			session.close();
+		}
+		if(sessionFactory!=null){
+			sessionFactory.close();
+		}
+	}
+	
+	private void closeDriver(){
+		if(driver!=null){
+			driver.close();
+			driver = null;
+		}
+	}
 }

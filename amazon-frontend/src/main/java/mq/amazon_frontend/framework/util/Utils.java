@@ -20,19 +20,26 @@ public class Utils {
 		InputStream is = null ;
 		File f = null;
 		String env = System.getProperty("environment");
-		System.out.println("Bla bla bla "+ env);
 		try {
-			if(env.equalsIgnoreCase("qa")){
-				f = new File(getProjectDirectory()+"//src//test//resources//app-data-qa01.properties");	
+			if(env!=null){
+				if(env.equalsIgnoreCase("qa")){
+					f = new File(getProjectDirectory()+"//src//test//resources//app-data-qa01.properties");	
+				}
+			}
+
+			else{
+
+				//Load the default qa env
+				f = new File(getProjectDirectory()+"//src//test//resources//app-data-qa01.properties");
 			}
 
 			is = new FileInputStream(f);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} 
-		
+
 		return is;
-		
+
 	}
 
 	public static Properties loadAppDataPropertiesFile(){

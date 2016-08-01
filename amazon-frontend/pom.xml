@@ -94,5 +94,14 @@
 	</dependency>
 	
 
+	<!-- Latest version 2.0.2 does not support latest Selenium. You must use 1.4.01  -->
+	<!-- You need xml-apis for error : java.lang.NoClassDefFoundError: org/w3c/dom/ElementTraversal  -->
+<dependency>
+    <groupId>xml-apis</groupId>
+    <artifactId>xml-apis</artifactId>
+    <version>1.4.01</version>
+</dependency>
+
+        
   </dependencies>
 </project>

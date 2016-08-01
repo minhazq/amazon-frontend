@@ -4,8 +4,8 @@
 <suite name="Functional Test Suite" verbose="1" >
   <test name="Valid Login" >
     <classes>
-<!--        <class name="mq.amazon_frontend.login.FR001_ValidLogin" /> -->
-       <class name="mq.amazon_frontend.login.Test" />
+        <class name="mq.amazon_frontend.login.FR001_ValidLogin" /> 
+       <!--<class name="mq.amazon_frontend.login.Test" />-->
     </classes>
   </test>
  

@@ -13,4 +13,10 @@ public class SignInPageModel extends PageModelBase{
 	
 	@FindBy(id="ap_email")
 	public WebElement emailTxtBox;
+	
+	@FindBy(id="ap_password")
+	public WebElement passwordTxtBox;
+	
+	@FindBy(id="signInSubmit")
+	public WebElement signInBtn;
 }

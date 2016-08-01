@@ -11,11 +11,23 @@ public class SignInPageController extends ControllerBase{
 	public SignInPageController(WebDriver driver) {
 		super(driver);
 		signInPageModel = new SignInPageModel(driver);
+		
 	}
 
-	public void enterEmail(String email){
-		System.out.println("enter email");
+	public SignInPageController enterEmail(String email){
 		signInPageModel.emailTxtBox.sendKeys(email);
-		
+		logger.info("entering email " + email);
+		return this;
+	}
+	
+	public SignInPageController enterPassword(String password){
+		signInPageModel.passwordTxtBox.sendKeys(password);
+		logger.info("entering password " + password);
+		return this;
+	}
+	
+	public void clickSignIn(){
+		signInPageModel.signInBtn.click();
+		logger.info("Signin Button clicked ");
 	}
 }

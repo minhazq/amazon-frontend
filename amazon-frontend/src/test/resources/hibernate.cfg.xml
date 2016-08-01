@@ -11,6 +11,9 @@
     <property name="hibernate.connection.url">jdbc:mysql://mquraishi.com:3306/amazon_userprofile_db</property>
     <property name="hibernate.connection.username">mquraishi</property>
     <property name="hibernate.connection.password">Nopassword1</property>
+    <property name="show_sql">true</property>
+    
+    <mapping class="mq.amazon_frontend.framework.persistance.AccountProfile" />
 </session-factory>
 
 </hibernate-configuration>

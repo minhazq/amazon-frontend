@@ -6,6 +6,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 import antlr.collections.List;
+import mq.amazon_frontend.framework.persistance.AccountProfile;
 
 public class Test{
 
@@ -18,14 +19,18 @@ public class Test{
 		Session s = sf.openSession();
 		s.beginTransaction();
 		
+		AccountProfile ap = s.get(AccountProfile.class, 1);
+		System.out.println(ap.getUser_fullname());
 		
+		Query q = s.createQuery("from AccountProfile");
+		java.util.List list = q.list();
 		
-		
-		Query query = s.createQuery("from accountprofile where id = 1");	
+		AccountProfile a = (AccountProfile) list.get(0);
+		System.out.println(a.getUser_city());
+		s.getTransaction().commit();
+		s.close();
+		sf.close();// Without this java app keep running
 
-		List result = (List) query.list();
-		
-		System.out.println(result.toString());
 		
 		
 	}
