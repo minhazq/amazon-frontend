@@ -9,6 +9,7 @@ import org.hibernate.cfg.Configuration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
@@ -25,7 +26,7 @@ public abstract class Scriptbase {
 	private ApplicationController appController;
 	protected static Logger logger ;
 	protected Session session ;
-	SessionFactory sessionFactory ;
+	protected SessionFactory sessionFactory ;
 	
 	
 	public Scriptbase(){
