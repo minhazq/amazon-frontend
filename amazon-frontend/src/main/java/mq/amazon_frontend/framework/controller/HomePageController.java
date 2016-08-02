@@ -4,6 +4,7 @@ import mq.amazon_frontend.framework.Scriptbase;
 import mq.amazon_frontend.framework.model.HomePageModel;
 import mq.amazon_frontend.framework.util.Utils;
 
+
 public class HomePageController extends ControllerBase{
 
 	private HomePageModel homePageModel;

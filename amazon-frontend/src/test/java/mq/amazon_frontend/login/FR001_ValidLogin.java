@@ -1,9 +1,6 @@
 package mq.amazon_frontend.login;
-
 import java.lang.reflect.Method;
-
 import org.testng.annotations.Test;
-
 import mq.amazon_frontend.framework.Scriptbase;
 import mq.amazon_frontend.framework.persistance.AccountProfile;
 
