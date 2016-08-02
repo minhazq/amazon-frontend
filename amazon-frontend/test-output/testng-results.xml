@@ -1,47 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="1" failed="0" total="1" passed="0">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="4498" started-at="2016-07-31T23:53:02Z" finished-at="2016-07-31T23:53:06Z">
+  <suite name="Default suite" duration-ms="31" started-at="2016-08-02T02:05:56Z" finished-at="2016-08-02T02:05:56Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="4498" started-at="2016-07-31T23:53:02Z" finished-at="2016-07-31T23:53:06Z">
-      <class name="mq.amazon_frontend.login.FR001_ValidLogin">
-        <test-method status="PASS" signature="setup()[pri:0, instance:mq.amazon_frontend.login.FR001_ValidLogin@3745e5c6]" name="setup" is-config="true" duration-ms="6" started-at="2016-07-31T19:53:02Z" finished-at="2016-07-31T19:53:02Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="beforeMethod()[pri:0, instance:mq.amazon_frontend.login.FR001_ValidLogin@3745e5c6]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2016-07-31T19:53:02Z" finished-at="2016-07-31T19:53:02Z">
-          <exception class="org.hibernate.service.spi.ServiceException">
+    <test name="Default test" duration-ms="31" started-at="2016-08-02T02:05:56Z" finished-at="2016-08-02T02:05:56Z">
+      <class name="mq.amazon_frontend.login.Test">
+        <test-method status="FAIL" signature="myTest()[pri:0, instance:mq.amazon_frontend.login.Test@7dc36524]" name="myTest" duration-ms="13" started-at="2016-08-01T22:05:56Z" finished-at="2016-08-01T22:05:56Z">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]]]>
+              <![CDATA[expected [modna] but found [modon]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:244)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:208)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:189)
-	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:51)
-	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:94)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:217)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:189)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.handleTypes(MetadataBuildingProcess.java:352)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:111)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.build(MetadataBuildingProcess.java:83)
-	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:418)
-	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:87)
-	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:692)
-	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:724)
-	at mq.amazon_frontend.framework.Scriptbase.loadHibernateSession(Scriptbase.java:117)
-	at mq.amazon_frontend.framework.Scriptbase.beforeMethod(Scriptbase.java:76)
+              <![CDATA[java.lang.AssertionError: expected [modna] but found [modon]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:190)
+	at org.testng.Assert.assertEquals(Assert.java:200)
+	at mq.amazon_frontend.login.Test.myTest(Test.java:26)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:497)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:514)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:215)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:589)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
@@ -60,83 +45,13 @@
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
-Caused by: org.hibernate.exception.JDBCConnectionException: Error calling Driver#connect
-	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:115)
-	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator$1$1.convert(BasicConnectionCreator.java:101)
-	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.convertSqlException(BasicConnectionCreator.java:123)
-	at org.hibernate.engine.jdbc.connections.internal.DriverConnectionCreator.makeConnection(DriverConnectionCreator.java:41)
-	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.createConnection(BasicConnectionCreator.java:58)
-	at org.hibernate.engine.jdbc.connections.internal.PooledConnections.addConnections(PooledConnections.java:106)
-	at org.hibernate.engine.jdbc.connections.internal.PooledConnections.<init>(PooledConnections.java:40)
-	at org.hibernate.engine.jdbc.connections.internal.PooledConnections.<init>(PooledConnections.java:19)
-	at org.hibernate.engine.jdbc.connections.internal.PooledConnections$Builder.build(PooledConnections.java:138)
-	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildPool(DriverManagerConnectionProviderImpl.java:110)
-	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure(DriverManagerConnectionProviderImpl.java:74)
-	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:94)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:217)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:189)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.buildJdbcConnectionAccess(JdbcEnvironmentInitiator.java:145)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:66)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
-	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:88)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:234)
-	... 41 more
-Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:741)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:57)
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1663)
-	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:662)
-	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:352)
-	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:221)
-	at org.hibernate.engine.jdbc.connections.internal.DriverConnectionCreator.makeConnection(DriverConnectionCreator.java:38)
-	... 56 more
-Caused by: com.mysql.cj.core.exceptions.CJCommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
-	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:54)
-	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:93)
-	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:133)
-	at com.mysql.cj.core.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:149)
-	at com.mysql.cj.mysqla.io.MysqlaSocketConnection.connect(MysqlaSocketConnection.java:83)
-	at com.mysql.cj.mysqla.MysqlaSession.connect(MysqlaSession.java:144)
-	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:1783)
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1653)
-	... 60 more
-Caused by: java.net.UnknownHostException: mquraishi.com: unknown error
-	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
-	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:928)
-	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1323)
-	at java.net.InetAddress.getAllByName0(InetAddress.java:1276)
-	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
-	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
-	at com.mysql.cj.core.io.StandardSocketFactory.connect(StandardSocketFactory.java:179)
-	at com.mysql.cj.mysqla.io.MysqlaSocketConnection.connect(MysqlaSocketConnection.java:57)
-	... 63 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.hibernate.service.spi.ServiceException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="SKIP" signature="simpleTest()[pri:0, instance:mq.amazon_frontend.login.FR001_ValidLogin@3745e5c6]" name="simpleTest" duration-ms="1" started-at="2016-07-31T19:53:06Z" finished-at="2016-07-31T19:53:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- simpleTest -->
-        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:mq.amazon_frontend.login.FR001_ValidLogin@3745e5c6]" name="afterMethod" is-config="true" duration-ms="0" started-at="2016-07-31T19:53:06Z" finished-at="2016-07-31T19:53:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="SKIP" signature="tearDown()[pri:0, instance:mq.amazon_frontend.login.FR001_ValidLogin@3745e5c6]" name="tearDown" is-config="true" duration-ms="0" started-at="2016-07-31T19:53:06Z" finished-at="2016-07-31T19:53:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- mq.amazon_frontend.login.FR001_ValidLogin -->
+        </test-method> <!-- myTest -->
+      </class> <!-- mq.amazon_frontend.login.Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

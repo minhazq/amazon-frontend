@@ -4,6 +4,7 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+import org.testng.Assert;
 
 import antlr.collections.List;
 import mq.amazon_frontend.framework.persistance.AccountProfile;
@@ -12,11 +13,18 @@ import mq.amazon_frontend.framework.util.Utils;
 public class Test{
 
 	
-	
-	public static void main(String[] args){
+	@org.testng.annotations.Test
+	public void myTest(){
 		
 		
-		System.out.println(Utils.getOSName());
+		try{
+			Assert.assertEquals("test", "test1");
+		}catch(AssertionError a){
+			System.out.println("assertion error brother....");
+		}
+		
+		Assert.assertEquals("modon", "modna");
+		
 		
 		/*Configuration c = new Configuration().configure();
 		SessionFactory sf = c.buildSessionFactory();

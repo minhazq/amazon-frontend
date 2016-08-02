@@ -21,12 +21,13 @@ import mq.amazon_frontend.framework.util.Utils;
 
 public abstract class Scriptbase {
 
-	protected WebDriver driver;
+	public static WebDriver driver;
 	protected Properties appDataProperties;
 	private ApplicationController appController;
 	protected static Logger logger ;
 	protected Session session ;
 	protected SessionFactory sessionFactory ;
+	public static  boolean assertAll = false;
 	
 	
 	public Scriptbase(){
@@ -40,7 +41,7 @@ public abstract class Scriptbase {
 
 
 	private void setAppController() {
-		appController = new ApplicationController(driver);
+		appController = new ApplicationController();
 	}
 
 	private void setDriver() {
@@ -133,6 +134,12 @@ public abstract class Scriptbase {
 		if(driver!=null){
 			driver.close();
 			driver = null;
+		}
+	}
+	
+	public void assertALL(String methodName){
+		if(assertAll){
+			Assert.fail(methodName + " : Test FAILED");
 		}
 	}
 }
