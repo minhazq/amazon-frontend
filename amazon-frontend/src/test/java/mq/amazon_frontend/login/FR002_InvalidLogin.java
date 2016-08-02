@@ -8,7 +8,10 @@ public class FR002_InvalidLogin extends Scriptbase{
 
 	
 	@Test
-	public void invalidLoginTest(){
-		//TODO:
+	public void searchTest(){
+		String description = amazonWebService().setScheme().setHost().setPath().addAppId().addLocation("new york").
+			executeGetAndParse().getResponseForDescription();
+		
+		amazon().landingPage().search(description);
 	}
 }

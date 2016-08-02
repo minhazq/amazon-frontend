@@ -27,6 +27,7 @@ public abstract class Scriptbase {
 	protected static Logger logger ;
 	protected Session session ;
 	protected SessionFactory sessionFactory ;
+	private AmazonWebService amazonWebService;
 	public static  boolean assertAll = false;
 	
 	
@@ -42,6 +43,7 @@ public abstract class Scriptbase {
 
 	private void setAppController() {
 		appController = new ApplicationController();
+		amazonWebService = new AmazonWebService();
 	}
 
 	private void setDriver() {
@@ -65,6 +67,12 @@ public abstract class Scriptbase {
 	protected ApplicationController amazon(){
 		return appController;
 	}
+	
+	
+	protected AmazonWebService amazonWebService(){
+		return amazonWebService;
+	}
+	
 	
 	@BeforeTest
 	public void setup(){

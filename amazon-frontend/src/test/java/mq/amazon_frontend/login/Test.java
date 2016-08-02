@@ -1,5 +1,17 @@
 package mq.amazon_frontend.login;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.URISyntaxException;
+
+import org.apache.http.HttpEntity;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.utils.URIBuilder;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -12,18 +24,45 @@ import mq.amazon_frontend.framework.util.Utils;
 
 public class Test{
 
-	
+	//http://api.openweathermap.org/data/2.5/weather?APPID=013f7e07d808de9061a24fb1760b6f62&q=London
 	@org.testng.annotations.Test
 	public void myTest(){
 		
 		
-		try{
-			Assert.assertEquals("test", "test1");
-		}catch(AssertionError a){
-			System.out.println("assertion error brother....");
+		CloseableHttpClient client = HttpClients.createDefault();
+		URIBuilder builder = new URIBuilder();
+		CloseableHttpResponse response ;
+		
+		builder.setScheme("http");
+		builder.setHost("api.openweathermap.org");
+		builder.setPath("//data//2.5//weather");
+		builder.addParameter("APPID", "013f7e07d808de9061a24fb1760b6f62");
+		builder.addParameter("q", "London");
+		
+		
+		try {
+			HttpGet get = new HttpGet(builder.build());
+			
+			response = client.execute(get);
+			HttpEntity entity = response.getEntity();
+			InputStream is = entity.getContent();
+			
+			BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+			
+			String line;
+			StringBuilder sbuilder = new StringBuilder();
+			while((line=reader.readLine())!=null){
+				sbuilder.append(line);
+			}
+			
+			System.out.println(sbuilder.toString());
+			
+			
+		} catch (URISyntaxException | IOException e) {
+			e.printStackTrace();
 		}
 		
-		Assert.assertEquals("modon", "modna");
+		
 		
 		
 		/*Configuration c = new Configuration().configure();
