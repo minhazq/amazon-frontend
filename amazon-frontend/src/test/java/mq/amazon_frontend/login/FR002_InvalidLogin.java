@@ -9,6 +9,6 @@ public class FR002_InvalidLogin extends Scriptbase{
 	
 	@Test
 	public void invalidLoginTest(){
-		amazon().landingPage().clickLogin().enterEmail("test");
+		//TODO:
 	}
 }

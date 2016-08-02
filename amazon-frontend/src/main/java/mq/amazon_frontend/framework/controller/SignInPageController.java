@@ -1,6 +1,4 @@
 package mq.amazon_frontend.framework.controller;
-import org.openqa.selenium.WebDriver;
-
 import mq.amazon_frontend.framework.model.SignInPageModel;
 
 public class SignInPageController extends ControllerBase{

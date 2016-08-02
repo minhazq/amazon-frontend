@@ -8,7 +8,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import com.google.common.base.Predicate;
-
 import mq.amazon_frontend.framework.Scriptbase;
 
 //Each Model Page should consist of Header and Footer no matter what kind of Page it is. 

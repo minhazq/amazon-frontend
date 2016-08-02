@@ -1,6 +1,5 @@
 package mq.amazon_frontend.framework.controller;
 import org.testng.Assert;
-
 import mq.amazon_frontend.framework.Scriptbase;
 import mq.amazon_frontend.framework.model.SearchPageModel;
 import mq.amazon_frontend.framework.util.Utils;
