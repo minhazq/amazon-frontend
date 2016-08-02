@@ -22,7 +22,7 @@ public class Utils {
 		String env = System.getProperty("environment");
 		try {
 			if(env!=null){
-				if(env.equalsIgnoreCase("qa")){
+				if(env.equalsIgnoreCase("qa01")){
 					f = new File(getProjectDirectory()+"//src//test//resources//app-data-qa01.properties");	
 				}
 			}

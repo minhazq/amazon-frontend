@@ -7,6 +7,7 @@ import org.hibernate.cfg.Configuration;
 
 import antlr.collections.List;
 import mq.amazon_frontend.framework.persistance.AccountProfile;
+import mq.amazon_frontend.framework.util.Utils;
 
 public class Test{
 
@@ -14,7 +15,10 @@ public class Test{
 	
 	public static void main(String[] args){
 		
-		Configuration c = new Configuration().configure();
+		
+		System.out.println(Utils.getOSName());
+		
+		/*Configuration c = new Configuration().configure();
 		SessionFactory sf = c.buildSessionFactory();
 		Session s = sf.openSession();
 		s.beginTransaction();
@@ -30,7 +34,7 @@ public class Test{
 		s.getTransaction().commit();
 		s.close();
 		sf.close();// Without this java app keep running
-
+*/
 		
 		
 	}
