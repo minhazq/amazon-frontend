@@ -102,7 +102,7 @@ public abstract class Scriptbase {
 	private void setChromeBrowser() {
 		if(Utils.getOSName().contains("mac")){
 			System.setProperty("webdriver.chrome.driver", Utils.getProjectDirectory()+"//libs//browsers//chromedriver-mac");
-		}else if(Utils.getOSName().equalsIgnoreCase("win")){
+		}else if(Utils.getOSName().contains("windows")){
 			System.setProperty("webdriver.chrome.driver", Utils.getProjectDirectory()+"//libs//browsers//chromedriver-win.exe");
 		}else{
 			System.out.println("OS is not supported from Chrome Driver");

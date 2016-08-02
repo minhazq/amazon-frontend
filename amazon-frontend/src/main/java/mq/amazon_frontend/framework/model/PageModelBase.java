@@ -8,6 +8,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.google.common.base.Predicate;
 
+
+
+
 public abstract class PageModelBase {
 
 	protected WebDriver driver;
@@ -24,8 +27,6 @@ public abstract class PageModelBase {
 	static void waitForPageLoad(WebDriver wdriver) {
 	    WebDriverWait wait = new WebDriverWait(wdriver, 60);
 	    Predicate<WebDriver> pageLoaded = new Predicate<WebDriver>() {
-
-	        @Override
 	        public boolean apply(WebDriver input) {
 	            logger.info("Waiting for the page to be loaded...");
 	        	//Will not work for the AJAX part
