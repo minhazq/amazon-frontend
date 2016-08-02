@@ -8,7 +8,7 @@ The Reuqirement :
   
   ** IF you do not sent any argument then default browser will be firefox and default environment will be qa01
   
-2) You must have to able to connect to my personal database. Frameowrk conist of user name and password hard coded. You might see firewall issue 
+2) You must have to be able to connect to my personal database. Frameowrk consist of user name and password hard coded. You might see firewall issue 
 or connectivity issue. If you see this please create a simple MySql database and table as follows:
 1) Create amazon_userprofile_db database
 2) create table accountprofile using the following entry:
