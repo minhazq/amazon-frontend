@@ -28,25 +28,11 @@
                   <suiteXmlFiles> 
                    <suiteXmlFile>testng.xml</suiteXmlFile>
                   </suiteXmlFiles>  
-                  <!-- c:\Temp>java org.testng.TestNG -groups regressiontest -->                     
-                  <!--testname AllTests--> 
-                    <!--<groups>regressiontest</groups> -->
-                    <!-- <trimStackTrace>false</trimStackT;race> --> 
-                    <!--<suitename>AllTests</suitename>-->
-                          <!--  <suiteXmlFiles>
-                                  <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
-                           </suiteXmlFiles> -->
-                            <!-- Build with '-DskipTests=true' to bypass test execution @ build time Default:
-                            false -->
-                            <!--<skipTests>${skipTests}</skipTests> -->
                            <testFailureIgnore>true</testFailureIgnore>
                   </configuration>
               </plugin>
        </plugins> 
        <resources>
-              <!-- <resource> 
-                     <directory>src/test/resources</directory>
-              </resource>  -->
        </resources>
 </build>
   

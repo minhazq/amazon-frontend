@@ -8,11 +8,11 @@ public class FR002_InvalidLogin extends Scriptbase{
 
 	/*
 	 * Scenario: Assume Amazon customer search based on the weather data.if it cloudy then they will search cloudy 
-	 * Verify dynamically that every time you execute the test based on local weather your script search with data.
-	 *  Basically i want to show that using totally two separate component how to test dynamically.
+	 * Verify dynamically that every time you execute the test based on local weather your script search with that data.
+	 *  Basically i want to show that  totally two separate component how to test dynamically together.
 	 */
 	
-	@Test
+	@Test(groups="smoke,service")
 	public void searchTest(){
 		String description = amazonWebService().setScheme().setHost().setPath().addAppId().addLocation("new york").
 			executeGetAndParse().getResponseForDescription();

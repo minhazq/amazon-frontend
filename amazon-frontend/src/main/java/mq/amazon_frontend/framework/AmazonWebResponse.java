@@ -46,6 +46,7 @@ public class AmazonWebResponse {
 		} catch (ParserConfigurationException | SAXException | IOException e) {
 			e.printStackTrace();
 		}
+		logger.info("Weather data ="+ description);
 		return description;
 	}
 	
