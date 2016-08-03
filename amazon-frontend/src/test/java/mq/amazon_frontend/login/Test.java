@@ -38,6 +38,7 @@ public class Test{
 		builder.setPath("//data//2.5//weather");
 		builder.addParameter("APPID", "013f7e07d808de9061a24fb1760b6f62");
 		builder.addParameter("q", "London");
+		builder.addParameter("mode", "xml");
 		
 		
 		try {

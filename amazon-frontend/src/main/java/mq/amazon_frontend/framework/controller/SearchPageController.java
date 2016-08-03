@@ -15,9 +15,9 @@ public class SearchPageController extends ControllerBase{
 		
 	}
 	
-	public void verifySearchText(){
+	public void verifySearchText(String expected){
 		String actual = searchPageModel.searchResultTxt.getText();
-		String expected = Utils.loadAppDataPropertiesFile().getProperty("searchText1");
+		//String expected = Utils.loadAppDataPropertiesFile().getProperty("searchText1");
 		try{
 			Assert.assertEquals(actual, expected);
 		}catch(AssertionError ae){
@@ -26,5 +26,7 @@ public class SearchPageController extends ControllerBase{
 		}
 		
 	}
+	
+	
 
 }

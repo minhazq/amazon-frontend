@@ -9,6 +9,8 @@ import javax.xml.parsers.SAXParserFactory;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
@@ -19,8 +21,10 @@ public class AmazonWebResponse {
 	private InputStream is;
 	private HttpEntity entity;
 	protected String description;
+	private Logger logger;
 	
 	public AmazonWebResponse(CloseableHttpResponse response){
+		logger = LogManager.getLogger(this);
 		this.response = response;
 		entity = this.response.getEntity();
 		try {
@@ -49,39 +53,16 @@ public class AmazonWebResponse {
 	
 	class LocationDefaultHandler extends DefaultHandler{
 		
-		private boolean descriptionOpenTag = false;
-		
 		@Override
 		public void startElement(String uri, String localName, String qName, Attributes attributes)
 				throws SAXException {
 	
 			super.startElement(uri, localName, qName, attributes);
 			
-			if(qName.equalsIgnoreCase("description")){
-				descriptionOpenTag = true;
+			if(qName.equalsIgnoreCase("weather")){
+				description = attributes.getValue("value");
 			}
 		}
-		
-		
-		@Override
-		public void endElement(String uri, String localName, String qName) throws SAXException {
-			
-			super.endElement(uri, localName, qName);
-			if(qName.equalsIgnoreCase("description")){
-				descriptionOpenTag = false;
-			}
-		}
-		
-		@Override
-		public void characters(char[] ch, int start, int length) throws SAXException {
-			
-			super.characters(ch, start, length);
-			
-			if(descriptionOpenTag){
-				description = (new String(ch,start,length));
-			}
-		}
-		
 		
 	}
 	

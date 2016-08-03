@@ -49,6 +49,8 @@ public class AmazonWebService {
 	public AmazonWebResponse executeGetAndParse(){
 		try {
 			
+			//After adding all param the last param should be mode=xml; so lets add them
+			builder.addParameter("mode", "xml");
 			get = new HttpGet(builder.build());
 			response = client.execute(get);
 			

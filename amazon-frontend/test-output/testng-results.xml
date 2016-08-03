@@ -2,32 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="9976" started-at="2016-08-02T20:48:10Z" finished-at="2016-08-02T20:48:20Z">
+  <suite name="Default suite" duration-ms="425" started-at="2016-08-03T01:07:07Z" finished-at="2016-08-03T01:07:07Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="9976" started-at="2016-08-02T20:48:10Z" finished-at="2016-08-02T20:48:20Z">
-      <class name="mq.amazon_frontend.login.FR002_InvalidLogin">
-        <test-method status="PASS" signature="setup()[pri:0, instance:mq.amazon_frontend.login.FR002_InvalidLogin@add0edd]" name="setup" is-config="true" duration-ms="6" started-at="2016-08-02T16:48:10Z" finished-at="2016-08-02T16:48:10Z">
+    <test name="Default test" duration-ms="425" started-at="2016-08-03T01:07:07Z" finished-at="2016-08-03T01:07:07Z">
+      <class name="mq.amazon_frontend.login.Test">
+        <test-method status="PASS" signature="myTest()[pri:0, instance:mq.amazon_frontend.login.Test@48140564]" name="myTest" duration-ms="410" started-at="2016-08-02T21:07:07Z" finished-at="2016-08-02T21:07:07Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:mq.amazon_frontend.login.FR002_InvalidLogin@add0edd]" name="beforeMethod" is-config="true" duration-ms="5550" started-at="2016-08-02T16:48:10Z" finished-at="2016-08-02T16:48:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="searchTest()[pri:0, instance:mq.amazon_frontend.login.FR002_InvalidLogin@add0edd]" name="searchTest" duration-ms="4291" started-at="2016-08-02T16:48:15Z" finished-at="2016-08-02T16:48:19Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchTest -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:mq.amazon_frontend.login.FR002_InvalidLogin@add0edd]" name="afterMethod" is-config="true" duration-ms="119" started-at="2016-08-02T16:48:19Z" finished-at="2016-08-02T16:48:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:mq.amazon_frontend.login.FR002_InvalidLogin@add0edd]" name="tearDown" is-config="true" duration-ms="0" started-at="2016-08-02T16:48:20Z" finished-at="2016-08-02T16:48:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- mq.amazon_frontend.login.FR002_InvalidLogin -->
+        </test-method> <!-- myTest -->
+      </class> <!-- mq.amazon_frontend.login.Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -3,6 +3,7 @@ import java.lang.reflect.Method;
 import org.testng.annotations.Test;
 import mq.amazon_frontend.framework.Scriptbase;
 import mq.amazon_frontend.framework.persistance.AccountProfile;
+import mq.amazon_frontend.framework.util.Utils;
 
 public class FR001_ValidLogin extends Scriptbase{
 
@@ -27,7 +28,7 @@ public class FR001_ValidLogin extends Scriptbase{
 		amazon().landingPage().search("java books");
 		//or 
 		//amazon().search("java books"); both will work. Search is in the header. From any page you can search
-		amazon().searchPage().verifySearchText();
+		amazon().searchPage().verifySearchText(Utils.loadAppDataPropertiesFile().getProperty("searchText1"));
 		assertALL(method.getName());
 	}
 	
