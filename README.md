@@ -26,6 +26,7 @@ amazon-frontend
 	user_city,user_state,user_country,user_phonenumber) values ("Min2","mypassword123","Minhajul quraishi","123 queens","Queens","NY",
 			"USA","7184234565");</p>
 <p>==========================</p>
-<p> Now you are good to go</p>
+<p><h5> update the hibernet.cfg.xml </h5></p>
+<p> Thats all folks</p>
 
 
