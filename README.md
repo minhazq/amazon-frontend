@@ -1,6 +1,6 @@
 amazon-frontend
 <p><h1>Demo Automation Framework:</h1></p>
-<p>The Reuqirement :</p> 
+<p>Reuqirements :</p> 
 1) Execute POM file with the following parameter:
   environment = qa01
   browser = firefox or chrome ( your choice)
