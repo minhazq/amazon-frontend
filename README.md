@@ -1,11 +1,11 @@
 amazon-frontend
 <p><h1>Demo Automation Framework:</h1></p>
 <p>Reuqirements :</p> 
-1) Execute POM file with the following parameter:
+<p>1) Execute POM file with the following parameter:
   environment = qa01
   browser = firefox or chrome ( your choice)
   
-  IF you do not sent any argument then default browser will be firefox and default environment will be qa01
+  IF you do not sent any argument then default browser will be firefox and default environment will be qa01</p>
 2) You must have to be able to connect to my personal database. Frameowrk consist of user name and password hard coded. You might see firewall issue or connectivity issue. If you see this please run the following script :
 
 <p>Create database amazon_userprofile_db ;</p>
