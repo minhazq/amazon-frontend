@@ -1,6 +1,5 @@
-# amazon-frontend#
+amazon-frontend
 Demo Automation Framework:
-
 The Reuqirement : 
 1) Execute POM file with the following parameter:
   environment = qa01
