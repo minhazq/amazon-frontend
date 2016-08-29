@@ -4,13 +4,16 @@
 "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 
 <hibernate-configuration>
-
+<!-- mquraishi and password password nai cap n and num 1 -->
 <session-factory>
 	<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
     <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
     <property name="hibernate.connection.url">jdbc:mysql://mquraishi.com:3306/amazon_userprofile_db</property>
-    <property name="hibernate.connection.username">mquraishi</property>
-    <property name="hibernate.connection.password">Nopassword1</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/amazon_userprofile_db</property>
+    <property name="hibernate.connection.username">xxx</property>
+    <property name="hibernate.connection.password">xxx</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password"></property>
     <property name="show_sql">true</property>
     
     <mapping class="mq.amazon_frontend.framework.persistance.AccountProfile" />
